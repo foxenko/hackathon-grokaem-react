@@ -140,12 +140,21 @@ body {
 .content h3 {
   color: #007bff;
   font-size: 2rem;
-  font-family: ;
+  font-family: "Anonymous Pro", sans-serif, Arial;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .content p {
   color: #111;
   font-size: 1.5rem;
+  font-family: "Anonymous Pro", sans-serif, Arial;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .opportunity-container .opportunity:hover {
