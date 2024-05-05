@@ -1,187 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тачки.ru</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="header__container">
-          <a class="header-logo__link" href="./index.html">
-            <img class="header-logo" src="./images/logo/logo_1337.png" alt="ТАЧКИ" />
-          </a>
-          <nav class="header-nav">
-            <ul class="header-nav__ul">
-              <li class="header-nav__li">
-                <a class="header-nav__link__contacts" href="https://t.me/telegram">
-                  <p>КОНТАКТЫ</p>
-                </a>
-              </li>
-              <li class="header-nav__li">
-                <a class="header-nav__link__contacts" href="https://vk.com/vk">
-                  <p>КОНТАКТЫ</p>
-                </a>
-              </li>
-              <li class="header-nav__li">
-                <a class="header-nav__link__contacts" href="https://www.youtube.com/@YouTube">
-                  <p>КОНТАКТЫ</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-    
+      <div class="header__container">
+        <a class="header-logo__link" href="./index.html">
+          <img
+            class="header-logo"
+            src="./images/logo/logo_1337.png"
+            alt="ТАЧКИ"
+          />
+        </a>
+        <nav class="header-nav">
+          <ul class="header-nav__ul">
+            <li class="header-nav__li">
+              <a
+                class="header-nav__link__contacts"
+                href="https://t.me/telegram"
+              >
+                <p>КОНТАКТЫ</p>
+              </a>
+            </li>
+            <li class="header-nav__li">
+              <a class="header-nav__link__contacts" href="https://vk.com/vk">
+                <p>КОНТАКТЫ</p>
+              </a>
+            </li>
+            <li class="header-nav__li">
+              <a
+                class="header-nav__link__contacts"
+                href="https://www.youtube.com/@YouTube"
+              >
+                <p>КОНТАКТЫ</p>
+              </a>
+            </li>
+            <div class="login">
+              <button class="btn">Войти</button>
+              <i class="far fa-user"></i>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main class="main">
-        <form class="search-container" id="searchForm">
-            <label for="query">Запрос:</label>
-            <input type="text" id="query" class="search-input" placeholder="Введите запрос" aria-label="Введите запрос">
-            <button type="submit" id="searchBtn" class="search-button">Найти</button>
+      <form class="search-container" id="searchForm">
+        <label for="query">Запрос:</label>
+        <input
+          type="text"
+          id="query"
+          class="search-input"
+          placeholder="Введите запрос"
+          aria-label="Введите запрос"
+        />
+        <button type="submit" id="searchBtn" class="search-button">
+          Найти
+        </button>
+      </form>
+
+      <div
+        id="results"
+        class="results-container"
+        role="region"
+        aria-live="polite"
+      >
+        <!-- Результаты поиска будут отображены здесь -->
+      </div>
+
+      <div class="login-form">
+        <span class="fas fa-times" id="close-login-form"></span>
+        <form action="">
+          <h3>Логин</h3>
+          <input type="email" class="box" placeholder="почта" />
+          <h3>Пароль</h3>
+          <input type="password" class="box" placeholder="пароль" />
+          <p>Забыли свой пароль? <a href="#">Иди вспоминай!</a></p>
+          <input type="submit" value="Войти" class="btn" />
+          <p>Или войти через:</p>
+          <div class="button">
+            <a
+              class="btn"
+              href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fhl%3Dru%26pli%3D1&ec=GAlAwAE&hl=ru&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1409873103%3A1714858492950738&theme=mn&ddm=0"
+              >Google</a
+            >
+            <a
+              class="btn"
+              href="https://vk.com/login?ysclid=lvsmhh0v4i661220607"
+              >VK</a
+            >
+          </div>
+          <p>Нет аккаунта? <a href="">Создай!</a></p>
         </form>
-    
-        <div id="results" class="results-container" role="region" aria-live="polite">
-            <!-- Результаты поиска будут отображены здесь -->
-        </div>
+      </div>
 
-        <div class="main__container">
-          <h1 class="main__container__title">
-            Легковые автомобили
-          </h1>
-          <div class="cards-container">
-            <a class="card__link" href="./detalis/sneakers/New_Balance_C-ms574.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/matiz1.webp" alt="matiz" />
-                <div class="card__title__text">
-                  <h3 class="card__title">389 000 ₽</h3>
-                  <p class="card__text">Daewoo Matiz I Рестайлинг</p>
-                  <p class="card__text">2011 / 41 000 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/Hyundai Avante 2020.webp" alt="Hyundai Avante 2020" />
-                <div class="card__title__text">
-                  <h3 class="card__title">1 890 000 ₽</h3>
-                  <p class="card__text">Hyundai Avante VII</p>
-                  <p class="card__text">2020 / 28 350 км</p>
-                </div>
-              </div>
-            </a>
-    
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/vw tiguan1.webp" alt="vw tiguan1" />
-                <div class="card__title__text">
-                  <h3 class="card__title">2 449 000 ₽</h3>
-                  <p class="card__text">Volkswagen Tiguan</p>
-                  <p class="card__text">2020 / 88 688 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/mercedes1.webp" alt="mercedes1" />
-                <div class="card__title__text">
-                  <h3 class="card__title">7 998 000 ₽</h3>
-                  <p class="card__text">Mercedes-Benz GLS 400 d II (X167)</p>
-                  <p class="card__text">2019 / 104 949 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/Audi_A8_2015webp.webp" alt="Audi_A8_2015webp" />
-                <div class="card__title__text">
-                  <h3 class="card__title">3 399 000 ₽</h3>
-                  <p class="card__text">Audi A8 III (D4) Рестайлинг</p>
-                  <p class="card__text">2015 / 56 002 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/Mercedes-Benz G-Класс AMG 63 AMG, 2023.webp" alt="Mercedes-Benz G-Класс AMG 63 AMG, 2023" />
-                <div class="card__title__text">
-                  <h3 class="card__title">34 600 000 ₽</h3>
-                  <p class="card__text">Mercedes-Benz G-Класс AMG 63 AMG II (W463)</p>
-                  <p class="card__text">2023 / новый</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/Skoda_Octavia_2020.webp" alt="Skoda_Octavia_2020" />
-                <div class="card__title__text">
-                  <h3 class="card__title">2 239 000 ₽</h3>
-                  <p class="card__text">Skoda Octavia III (A7) Рестайлинг</p>
-                  <p class="card__text">2020 / 41 554 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/Zeekr_001_100_kWh.webp" alt="Zeekr_001_100_kWh" />
-                <div class="card__title__text">
-                  <h3 class="card__title">6 586 454 ₽</h3>
-                  <p class="card__text">Zeekr 001 100 kWh I</p>
-                  <p class="card__text">2023 / 20 км</p>
-                </div>
-              </div>
-            </a>
-            <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
-              <div class="card">
-                <img class="card__image" src="./images/cars/BMW_X4-20i_2021.webp" alt="BMW_X4-20i_2021" />
-                <div class="card__title__text">
-                  <h3 class="card__title">5 117 904 ₽</h3>
-                  <p class="card__text">BMW X4 20i II (G02)</p>
-                  <p class="card__text">2021 / 23 600 км</p>
-                </div>
-              </div>
-            </a>
-            
+      <section class="opportunity-container">
+        <div class="opportunity">
+          <i class="fas fa-car"></i>
+          <div class="content">
+            <h3>753+</h3>
+            <p>Машин продано!</p>
           </div>
         </div>
-      </main>
 
-      <footer class="footer">
-        <div class="footer__base">
-          <div class="footer__container">
-            <div class="footer__content">
-              <a class="footer-logo__link" href="./index.html">
-                <img class="footer-logo" src="./images/logo/logo_9999.png" alt="КРОССЫ — И ТОЧКА." />
-              </a>
-              <nav class="footer-nav">
-                <ul class="footer-nav__ul">
-                  <li class="header-nav__li">
-                    <a class="footer-nav__link__contacts" href="https://t.me/telegram">
-                      <p>КОНТАКТЫ</p>
-                    </a>
-                  </li>
-                  <li class="header-nav__li">
-                    <a class="footer-nav__link__contacts" href="https://vk.com/vk">
-                      <p>КОНТАКТЫ</p>
-                    </a>
-                  </li>
-                  <li class="header-nav__li">
-                    <a class="footer-nav__link__contacts" href="https://www.youtube.com/@YouTube">
-                      <p>КОНТАКТЫ</p>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+        <div class="opportunity">
+          <i class="fas fa-home"></i>
+          <div class="content">
+            <h3>10+</h3>
+            <p>Филиалов в стране!</p>
+          </div>
+        </div>
+
+        <div class="opportunity">
+          <i class="fas fa-users"></i>
+          <div class="content">
+            <h3>711+</h3>
+            <p>Довольных клиентов!</p>
+          </div>
+        </div>
+
+        <div class="opportunity">
+          <i class="fas fa-car"></i>
+          <div class="content">
+            <h3>100+</h3>
+            <p>Новых автомобилей!</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="main__container">
+        <h1 class="main__container__title">Легковые автомобили</h1>
+        <div class="cards-container">
+          <a
+            class="card__link"
+            href="./detalis/sneakers/New_Balance_C-ms574.html"
+          >
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/matiz1.webp"
+                alt="matiz"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">389 000 ₽</h3>
+                <p class="card__text">Daewoo Matiz I Рестайлинг</p>
+                <p class="card__text">2011 / 41 000 км</p>
+              </div>
             </div>
-            <!-- <p class="footer-text">ТАЧКИ.ru ® 2024</p> -->
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/Hyundai Avante 2020.webp"
+                alt="Hyundai Avante 2020"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">1 890 000 ₽</h3>
+                <p class="card__text">Hyundai Avante VII</p>
+                <p class="card__text">2020 / 28 350 км</p>
+              </div>
+            </div>
+          </a>
+
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/vw tiguan1.webp"
+                alt="vw tiguan1"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">2 449 000 ₽</h3>
+                <p class="card__text">Volkswagen Tiguan</p>
+                <p class="card__text">2020 / 88 688 км</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/mercedes1.webp"
+                alt="mercedes1"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">7 998 000 ₽</h3>
+                <p class="card__text">Mercedes-Benz GLS 400 d II (X167)</p>
+                <p class="card__text">2019 / 104 949 км</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/Audi_A8_2015webp.webp"
+                alt="Audi_A8_2015webp"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">3 399 000 ₽</h3>
+                <p class="card__text">Audi A8 III (D4) Рестайлинг</p>
+                <p class="card__text">2015 / 56 002 км</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/Mercedes-Benz G-Класс AMG 63 AMG, 2023.webp"
+                alt="Mercedes-Benz G-Класс AMG 63 AMG, 2023"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">34 600 000 ₽</h3>
+                <p class="card__text">
+                  Mercedes-Benz G-Класс AMG 63 AMG II (W463)
+                </p>
+                <p class="card__text">2023 / новый</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/Skoda_Octavia_2020.webp"
+                alt="Skoda_Octavia_2020"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">2 239 000 ₽</h3>
+                <p class="card__text">Skoda Octavia III (A7) Рестайлинг</p>
+                <p class="card__text">2020 / 41 554 км</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/Zeekr_001_100_kWh.webp"
+                alt="Zeekr_001_100_kWh"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">6 586 454 ₽</h3>
+                <p class="card__text">Zeekr 001 100 kWh I</p>
+                <p class="card__text">2023 / 20 км</p>
+              </div>
+            </div>
+          </a>
+          <a class="card__link" href="./detalis/sneakers/Nike_Dunk_Low_SP.html">
+            <div class="card">
+              <img
+                class="card__image"
+                src="./images/cars/BMW_X4-20i_2021.webp"
+                alt="BMW_X4-20i_2021"
+              />
+              <div class="card__title__text">
+                <h3 class="card__title">5 117 904 ₽</h3>
+                <p class="card__text">BMW X4 20i II (G02)</p>
+                <p class="card__text">2021 / 23 600 км</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__base">
+        <div class="footer__container">
+          <div class="footer__content">
+            <a class="footer-logo__link" href="./index.html">
+              <img
+                class="footer-logo"
+                src="./images/logo/logo_9999.png"
+                alt="КРОССЫ — И ТОЧКА."
+              />
+            </a>
+            <nav class="footer-nav">
+              <ul class="footer-nav__ul">
+                <li class="header-nav__li">
+                  <a
+                    class="footer-nav__link__contacts"
+                    href="https://t.me/telegram"
+                  >
+                    <p>КОНТАКТЫ</p>
+                  </a>
+                </li>
+                <li class="header-nav__li">
+                  <a
+                    class="footer-nav__link__contacts"
+                    href="https://vk.com/vk"
+                  >
+                    <p>КОНТАКТЫ</p>
+                  </a>
+                </li>
+                <li class="header-nav__li">
+                  <a
+                    class="footer-nav__link__contacts"
+                    href="https://www.youtube.com/@YouTube"
+                  >
+                    <p>КОНТАКТЫ</p>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <script src="scripts/index.js"></script>
-</body>
+  </body>
 </html>

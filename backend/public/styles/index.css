@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Anonymous Pro";
-  src: url(fonts/AnonymousPro-Bold.ttf);
+  src: url(../fonts/AnonymousPro-Bold.ttf);
   font-weight: 700;
 }
 
@@ -15,13 +15,13 @@
 
 @font-face {
   font-family: "Anonymous Pro";
-  src: url(fonts/AnonymousPro-Regular.ttf);
+  src: url(../fonts/AnonymousPro-Regular.ttf);
   font-weight: 400;
 }
 
 body {
   margin: 0;
-  background-color: #f1f1f1;
+  background-image: linear-gradient( rgb(64, 162, 248), rgb(253, 127, 226));
 }
 
 .header-logo__link,
@@ -38,13 +38,31 @@ body {
 }
 
 .footer-nav__link__contacts{
-    display: block;
+  display: block;
   color: #fff;
   text-decoration: none;
 }
 
+.btn{
+    display: inline-block;
+    justify-content: center;
+    border-radius: .4rem;
+    background: #007bff;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .5rem 3rem;
+    color: #fff;
+}
+
+.btn:hover{
+    background: #fff;
+    color: #007bff;
+}
+
 .footer-nav__link__contacts:hover{
-    
+    color: var(--orange);
+    border-bottom: 3px solid var(--orange);
 }
 
 .header-nav__link__contacts:hover{
@@ -54,6 +72,7 @@ body {
 
 .header {
   width: 100%;
+  height: 120px;
   background-color: #fff;
   border-bottom: 1px solid #a1a6b4;
 }
@@ -78,6 +97,139 @@ body {
 .header-nav {
   display: flex;
   align-items: center;
+}
+
+.opportunity-container{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.opportunity-container .opportunity{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   padding: 1rem;
+   background: #fff;
+   box-shadow: #111;
+   border-radius: .5rem;
+}
+
+.opportunity i{
+   height: 0.1rem;
+   width: 0.1rem;
+   line-height: 0.1rem;
+   font-size: 0.1rem;
+   border-radius: 50%;
+   background: #eee;
+   color: #111;
+   text-align: center;
+}
+
+.content h3{
+   color: #007bff;
+   font-size: 2rem;
+}
+
+.content p{
+   color: #111;
+   font-size: 1.5rem;
+}
+
+.opportunity-container .opportunity:hover{
+   background: #111;
+}
+
+.opportunity-container .opportunity:hover i{
+   background: #007bff;
+}
+
+.opportunity-container .opportunity:hover h3{
+   color: #fff;
+}
+
+.opportunity-container .opportunity:hover p{
+   color: #eee;
+}
+
+.login-form{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 105%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    opacity: 0;
+}
+
+.login-form.active{
+    top: 0;
+    opacity: 1;
+}
+
+.login-form form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+
+.login-form form .button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form form .btn{
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.login-form form h3{
+    color: #111;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: #111;
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+}
+
+.login-form form p{
+    padding:  1rem 0;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+.login-form form p a{
+    color: #f97306;
+    text-decoration: underline;
+}
+
+.login-form #close-login-form{
+    position: fixed;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: #111;
+    cursor: pointer;
 }
 
 .header-nav__ul {
@@ -202,121 +354,6 @@ body {
   line-height: normal;
 }
 
-.sneaker-detalis__container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 48px;
-  border-radius: 50px;
-  background-color: #fff;
-}
-
-.sneaker-detalis__image {
-  width: 100%;
-  max-height: 600px;
-  border-radius: 50px 50px 0px 0px;
-}
-
-.sneaker-detalis__info {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.sneaker-detalis__title {
-  margin: 0;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-.sneaker-detalis__subtitle {
-  margin: 0;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-.sneaker-detalis__additional-info {
-  display: flex;
-  gap: 32px;
-}
-
-.sneaker-detalis__text__container {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  width: 50%;
-  height: 100%;
-}
-
-.sneaker-detalis__text {
-  margin: 0;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-}
-
-.sneaker-detalis__parameters {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 50%;
-  height: 100%;
-}
-
-.sneaker-detalis__parameters-header {
-  border-bottom: 1px solid #121723;
-}
-
-.sneaker-detalis__parameters-title {
-  margin: 0 0 20px;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.sneaker-detalis__parameter {
-  border-bottom: 1px solid #121723;
-}
-
-.sneaker-detalis__parameter-info {
-  margin: 0 0 24px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.sneaker-detalis__parameter-title {
-  margin: 0;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.sneaker-detalis__parameter-value {
-  margin: 0;
-  color: #121723;
-  font-family: "Anonymous Pro", sans-serif, Arial;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 
 .footer {
   width: 100%;
@@ -393,62 +430,6 @@ body {
   .cards-container {
     flex-direction: column;
     margin: 0 auto;
-  }
-
-  .sneaker-detalis__container {
-    padding: 24px;
-    border-radius: 12px;
-  }
-
-  .sneaker-detalis__image {
-    border-radius: 12px 12px 0px 0px;
-  }
-
-  .sneaker-detalis__title {
-    font-size: 32px;
-  }
-
-  .sneaker-detalis__subtitle {
-    font-size: 20px;
-  }
-
-  .sneaker-detalis__additional-info {
-    flex-direction: column;
-  }
-
-  .sneaker-detalis__text__container {
-    gap: 24px;
-    width: 100%;
-  }
-
-  .sneaker-detalis__text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .sneaker-detalis__parameters {
-    width: 100%;
-  }
-
-  .sneaker-detalis__parameters-title {
-    font-size: 24px;
-  }
-
-  .sneaker-detalis__parameter-title {
-    font-size: 16px;
-  }
-
-  .sneaker-detalis__parameter-value {
-    font-size: 16px;
-  }
-
-  .footer__base {
-    width: 90%;
-  }
-
-  .footer__content {
-    flex-direction: column;
-    gap: 32px;
   }
 }
 

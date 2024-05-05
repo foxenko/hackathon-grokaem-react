@@ -40,3 +40,7 @@ async function handleFormSubmit(event) {
     console.error(error);
   }
 }
+
+document.querySelector('#login').onclick = () =>{
+  document.querySelector('.login-form').classList.toggle('active')
+ }

@@ -1,11 +1,13 @@
 const express = require("express");
+const app = express();
 const path = require("path");
 const errorHandler = require("./middlewares/errorHandler");
 const mainRoute = require("./routes/main");
 const searchRoute = require("./routes/search");
-const app = express();
 const PORT = process.env.PORT || 3000;
-
+const { readData, writeData } = require('./data/utils/parse')
+async function getDataByName(req, res){
+}
 app.use(
   express.json(),
   errorHandler,

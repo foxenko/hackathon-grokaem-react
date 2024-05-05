@@ -1,3 +1,5 @@
+// routes/searchRoutes.js
+
 const searchRoute = require("express").Router();
 const searchController = require("../controllers/searchController");
 
