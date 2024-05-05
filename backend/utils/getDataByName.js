@@ -7,4 +7,4 @@ const getDataByName = async (req, res) => {
         console.log(obj.key)
     }
 }
-module.exports = { getDataByName }
+module.exports = getDataByName

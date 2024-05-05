@@ -4,13 +4,14 @@
   font-weight: 700;
 }
 
-root{
+:root{
     --orange: #f97306;
     --yellow: #f9d806;
     --light-gray: #666;
     --border: .1rem solid #111;
     --box-shadow: 0 .5rem 1rem #111;
     --border: .1rem solid rgba(0, 0, 0, .1);
+}
 
 @font-face {
   font-family: "Anonymous Pro";
@@ -26,19 +27,29 @@ body {
 .header-logo__link,
 .footer-logo__link {
   display: block;
-  height: 100%;
   text-decoration: none;
 }
 
-.header-nav__link__contacts,
-.header-nav__link__contacts,
-.header-nav__link__contacts,
-.footer-nav__link__tg,
-.footer-nav__link__vk,
-.footer-nav__link__youtube {
+.header-nav__link__contacts
+ {
   display: block;
-  height: 100%;
+  color: #111;
   text-decoration: none;
+}
+
+.footer-nav__link__contacts{
+    display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav__link__contacts:hover{
+    
+}
+
+.header-nav__link__contacts:hover{
+  color: var(--orange);
+  border-bottom: 3px solid var(--orange);
 }
 
 .header {
@@ -328,7 +339,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 32px 0;
-  border-bottom: 1px solid #676b73;
 }
 
 .footer-logo {
