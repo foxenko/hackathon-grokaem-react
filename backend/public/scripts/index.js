@@ -41,6 +41,10 @@ async function handleFormSubmit(event) {
   }
 }
 
-document.querySelector('#login').onclick = () =>{
+document.querySelector('.login').onclick = () =>{
   document.querySelector('.login-form').classList.toggle('active')
+ }
+
+document.querySelector('#close-login-form').onclick = () =>{
+  document.querySelector('.login-form').classList.remove('active')
  }
