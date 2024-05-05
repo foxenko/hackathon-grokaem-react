@@ -29,8 +29,8 @@
 Подробное описание того, как установить и настроить проект.
 
 ```bash
-git clone https://github.com/ваш-проект
-cd ваш-проект
+git clone https://github.com/foxenko/hackathon-grokaem-react
+cd hackathon-grokaem-react
 npm install
 ```
 
