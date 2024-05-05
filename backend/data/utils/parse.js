@@ -1,7 +1,7 @@
 const fs = require('fs').promises
-const readData = async (url) => {
+const readData = async () => {
     try{
-        const result = await fs.readFile(url, "utf8")
+        const result = await fs.readFile('', "utf8")
         const data = JSON.parse(result)
         return data
     }catch(err){
